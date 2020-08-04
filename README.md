@@ -10,5 +10,7 @@ That bash script provide required functional.
 
 # usage
 export AWS_ACCESS_KEY_ID=your_key
+
 export AWS_SECRET_ACCESS_KEY=your_secret
+
 ./ecr_pass.sh us-east-1 | docker login --username AWS --password-stdin https://my_dkr_id.dkr.ecr.us-east-1.amazonaws.com
