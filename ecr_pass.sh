@@ -1,9 +1,17 @@
 #!/bin/bash
 
-
+#================================================================
+#-
+#-    version         0.0.1
+#-    author          Akinava © 2020
+#-    email           akinava@gmail.com
+#-
+#================================================================
+#
 # required tools:
 # curl sed openssl base64 date
-
+#
+#================================================================
 
 key=$AWS_ACCESS_KEY_ID
 secret=$AWS_SECRET_ACCESS_KEY
