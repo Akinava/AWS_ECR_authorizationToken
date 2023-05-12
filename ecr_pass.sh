@@ -16,11 +16,12 @@
 
 key=$AWS_ACCESS_KEY_ID
 secret=$AWS_SECRET_ACCESS_KEY
+region=$1
 
 
 if [ -z "$region" ]
 then
-    region="us-east-1"
+    echo "Error: variable region is not set"
 fi
 
 if [ -z "$key" ]
@@ -61,7 +62,7 @@ responce=$(curl -s --data ${data} \
     -H "X-Amz-Date: ${time_now}" \
     -H "Authorization: AWS4-HMAC-SHA256 Credential=${key}/${day_now}/${region}/ecr/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=${signature}" \
     -A "Botocore/1.17.22" \
-    -X POST https://api.ecr.us-east-1.amazonaws.com/)
+    -X POST https://api.ecr.${region}.amazonaws.com/)
 
 
 authorizationToken=$(echo $responce | sed "s/^.*authorizationToken\":\"\(.*\)\",.*$/\1/")
