@@ -5,6 +5,7 @@
 #-    version         0.0.1
 #-    author          Akinava © 2020
 #-    email           akinava@gmail.com
+#-    github          https://github.com/Akinava/AWS_ECR_authorizationToken
 #-
 #================================================================
 #
